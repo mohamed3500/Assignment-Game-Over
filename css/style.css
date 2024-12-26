@@ -1,0 +1,135 @@
+body {
+    font-family: "Comfortaa", serif;
+    background-color: #272B30;
+    /* position: relative; */
+}
+
+header {
+    background-image: url(../images/wraper.png);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+
+    /* background-color: red; */
+}
+
+nav {
+    /* position: absolute; */
+    /* top: 100%; */
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+    top: 0;
+    margin-top: -32px;
+    /* transform: translateY(-50%); */
+    border-radius: 20px;
+    background-color: #3A497B;
+    position: sticky !important;
+    z-index: 999;
+}
+
+.navbar-nav li a {
+    color: #fff;
+}
+
+.navbar-nav li a:hover {
+    color: #09c;
+}
+
+nav img {
+    width: 50px;
+}
+
+nav .active {
+    color: #0099CC !important;
+}
+
+.games-list {
+    margin-block: 80px;
+}
+
+.card {
+    background-color: #272B30 !important;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+
+.card img {
+    filter: grayscale(0.7);
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+    backface-visibility: hidden;
+}
+
+.card:hover .name-and-price,
+.card:hover img {
+    filter: grayscale(0);
+}
+
+.card .name-and-price {
+    /* opacity: 0.8; */
+    filter: grayscale(0.7);
+    transition: all 0.5s;
+}
+
+.card .card-title {
+    font-family: "Nerko One", serif;
+}
+
+.game-details .details-head img {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.5;
+    width: 20px;
+}
+
+.game-details .details-head img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.spinner-div {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
